@@ -1,8 +1,6 @@
 -- | Exercises on Lists
 module Koans.Lists
 
-import Prelude.List
-
 -- | What is the type of this list.
 nats : List Integer
 nats = [0,1,2,3,4,5,6,7,9]
@@ -31,14 +29,20 @@ headOList = x == head [5,4,3,2,1]
 tailOList : Bool
 tailOList = xs == tail [0,1,2,3,4,5]
   where
-    xs : List Integer
+    xs : Vect 5 Int
     xs = [1,2,3,4,5]
 
 lastOList : Bool
-lastOList = 1 == last [5,4,3,2,1]
+lastOList = x == last [5,4,3,2,1]
+  where
+    x : Int
+    x = 1
+
+intList : List Integer
+intList = [1,2,3,4,5]
 
 initOList : Bool
-initOList = [1,2,3,4,5] == init [1,2,3,4,5,6]
+initOList = intList == init [1,2,3,4,5,6]
 
 lengthOList : Bool
 lengthOList = 5 == length [1,2,3,4,5]

@@ -38,7 +38,7 @@ lastOList = x == last [5,4,3,2,1]
     x : Int
     x = 1
 
-intList : List Integer
+intList : Vect 5 Integer
 intList = [1,2,3,4,5]
 
 initOList : Bool
@@ -59,8 +59,8 @@ drop3 = [4..10] == drop 3 [1..10]
 countAllTheNumbers : Bool
 countAllTheNumbers = (foldl (plus) 1 [2..10]) == sum [1..10]
 
-timesAllTheNnumbers : Bool
-timesAllTheNnumbers = (foldl (\acc,x => acc * x) 1 [2..10]) == product [1..10]
+timesAllTheNumbers : Bool
+timesAllTheNumbers = (foldl (\acc,x => acc * x) 1 [2..10]) == product [1..10]
 
 elementOrNot : Bool
 elementOrNot = elem 4 [2..6] == True
